@@ -14,11 +14,23 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 	
 	if (!Engine::BuildWindowsStandaloneEngine())
 	{
-		return 1;
+		return -1;
+	}
+
+	if (g_Engine == nullptr)
+	{
+		return -1;
 	}
 	//Engine created!!
 
-	
+	//Init the engine
+	if (g_Engine->Initialize().status == ARESULT::FAILURE)
+	{
+		return -1;
+	}
+
+	//Start the Engine
+	g_Engine->Start();
 
 	return 0;
 }

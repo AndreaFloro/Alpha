@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "..\Include\Engine.h"
-#include "Logger.h"
+#include "Core\ILogger.h"
+#include "Core\WinWindow.h"
 
 using namespace Alpha;
 
@@ -28,5 +29,40 @@ bool Alpha::Engine::BuildWindowsStandaloneEngine()
 
 Alpha::Engine::~Engine()
 {
+}
+
+ARESULT Alpha::Engine::Initialize()
+{
+	ARESULT result;
+	result.status = ARESULT::FAILURE;
+
+	_window = new WinWindow();
+	if (!_window->Create())
+	{
+		return result;
+	}
+	
+	_window->Show();
+
+	result.status = ARESULT::SUCCESS;
+	return result;
+}
+
+void Alpha::Engine::Start()
+{
+	MSG msg;
+	while (true)
+	{
+		while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		{
+			if (msg.message == WM_QUIT)
+			{
+				return;
+			}
+
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
 }
 
