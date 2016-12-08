@@ -3,8 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{51DC6BF4-36FF-4C29-BB14-288EBAD4B6A0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Root\Engine\Engine.vcxproj", "{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Debug|x64.ActiveCfg = Debug|x64
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Debug|x64.Build.0 = Debug|x64
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Debug|x86.ActiveCfg = Debug|Win32
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Debug|x86.Build.0 = Debug|Win32
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Release|x64.ActiveCfg = Release|x64
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Release|x64.Build.0 = Release|x64
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Release|x86.ActiveCfg = Release|Win32
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3630DE3-E8FE-4EA8-999E-B15E8007EC7B} = {51DC6BF4-36FF-4C29-BB14-288EBAD4B6A0}
 	EndGlobalSection
 EndGlobal
