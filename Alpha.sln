@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Root\Engine\Engin
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototypes", "Prototypes", "{04713DDA-83E5-4AFA-96AC-B160E7F80B38}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "TestApp\TestApp.vcxproj", "{689F6758-8581-4ADE-807B-4A3552D2F429}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "Root\Prototypes\TestApp\TestApp.vcxproj", "{689F6758-8581-4ADE-807B-4A3552D2F429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
